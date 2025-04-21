@@ -1,0 +1,876 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alisterburt.github.io/napari-tomoslice/paths/">
+      
+      
+        <link rel="prev" href="../spheres/">
+      
+      
+        <link rel="next" href="../dipoles/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Paths - napari-tomoslice</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#paths" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="napari-tomoslice" class="md-header__button md-logo" aria-label="napari-tomoslice" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.75 20.85c1.78-.7 1.39-2.63.49-3.85-.89-1.25-2.12-2.11-3.36-2.94A9.8 9.8 0 0 1 4.54 12c-.28-.33-.85-.94-.27-1.06.59-.12 1.61.46 2.13.68.91.38 1.81.82 2.65 1.34l1.01-1.7C8.5 10.23 6.5 9.32 4.64 9.05c-1.06-.16-2.18.06-2.54 1.21-.32.99.19 1.99.77 2.77 1.37 1.83 3.5 2.71 5.09 4.29.34.33.75.72.95 1.18.21.44.16.47-.31.47-1.24 0-2.79-.97-3.8-1.61l-1.01 1.7c1.53.94 4.09 2.41 5.96 1.79m11.09-15.6c.22-.22.22-.58 0-.79l-1.3-1.3a.56.56 0 0 0-.78 0l-1.02 1.02 2.08 2.08M11 10.92V13h2.08l6.15-6.15-2.08-2.08z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            napari-tomoslice
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Paths
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alisterburt/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="napari-tomoslice" class="md-nav__button md-logo" aria-label="napari-tomoslice" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.75 20.85c1.78-.7 1.39-2.63.49-3.85-.89-1.25-2.12-2.11-3.36-2.94A9.8 9.8 0 0 1 4.54 12c-.28-.33-.85-.94-.27-1.06.59-.12 1.61.46 2.13.68.91.38 1.81.82 2.65 1.34l1.01-1.7C8.5 10.23 6.5 9.32 4.64 9.05c-1.06-.16-2.18.06-2.54 1.21-.32.99.19 1.99.77 2.77 1.37 1.83 3.5 2.71 5.09 4.29.34.33.75.72.95 1.18.21.44.16.47-.31.47-1.24 0-2.79-.97-3.8-1.61l-1.01 1.7c1.53.94 4.09 2.41 5.96 1.79m11.09-15.6c.22-.22.22-.58 0-.79l-1.3-1.3a.56.56 0 0 0-.78 0l-1.02 1.02 2.08 2.08M11 10.92V13h2.08l6.15-6.15-2.08-2.08z"/></svg>
+
+    </a>
+    napari-tomoslice
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alisterburt/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Annotate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generate Poses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convert Poses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spheres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spheres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Paths
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Paths
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#annotate-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotate Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-poses-from-path-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Poses from Path Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Poses from Path Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backbone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backbone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-poses-into-relion-5-star-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert Poses into Relion 5 STAR files
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dipoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dipoles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#annotate-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotate Paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-poses-from-path-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Poses from Path Annotations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Poses from Path Annotations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backbone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backbone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-poses-into-relion-5-star-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convert Poses into Relion 5 STAR files
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="paths">Paths</h1>
+<h2 id="annotate-paths">Annotate Paths</h2>
+<div class="highlight"><pre><span></span><code>napari-tomoslice annotate --tomogram-directory tomograms/ --annotation-directory tomograms/annotations/ --mode paths
+</code></pre></div>
+<ul>
+<li>Load a tomogram using the tomogram browser on the right panel</li>
+<li>
+<p>Annotate paths:</p>
+<ul>
+<li>Shift + click and drag to move the plane up/down  </li>
+<li>Press 'x', 'y', 'z', or 'o' to reorient the plane  </li>
+<li>Alt + click to add points to a path</li>
+<li>Press 'n' to start a new path  </li>
+<li>To go back and change the position of a previously added point on the path:  <ul>
+<li>Select the point using 'Select points' from the Napari layer control panel on the left</li>
+<li>Click the new desired position of the selected point</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Save path annotations with the 'save annotation' button on the right panel</p>
+</li>
+</ul>
+<p><img alt="Path annotation" src="../images/annotate-paths.png" />
+  <img alt="Path annotation" src="../images/annotate-paths-fibril.png" /></p>
+<details class="note">
+<summary>Example path annotation STAR file</summary>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">TS_01_paths.star</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>data_paths
+
+loop_
+_path_id #1
+_x #2
+_y #3
+_z #4
+0       544.339600      87.541283       143.654221
+0       575.727539      216.720276      143.654221
+0       599.883362      364.465271      143.654221
+0       625.092346      502.951721      143.654221
+0       644.559998      625.716187      143.654221
+0       669.907593      788.138611      143.654221
+1       949.780212      241.041260      119.062782
+1       850.739319      349.160553      119.062782
+1       757.877319      447.972382      119.062782
+1       673.598145      540.173889      119.062782
+1       649.529968      569.203552      125.231110
+1       605.604736      606.439026      136.268234
+1       571.453613      638.566162      148.028320
+...
+</code></pre></div>
+</div>
+</div>
+</details>
+<h2 id="generate-poses-from-path-annotations">Generate Poses from Path Annotations</h2>
+<h3 id="backbone">Backbone</h3>
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths backbone --annotations-directory tomograms/annotations/ --output-star-file tomograms/backbone.star --distance-between-particles 20
+</code></pre></div>
+<p><img alt="Path annotation" src="../images/backbone.png" />
+  <img alt="Path annotation" src="../images/backbone-fibril.png" /></p>
+<details class="note">
+<summary>Example backbone poses STAR file for path annotation</summary>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">backbone.star</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>data_particles
+
+loop_
+_x #1
+_y #2
+_z #3
+_rot #4
+_tilt #5
+_psi #6
+_manifold_id #7
+_tilt_series_id #8
+544.339600      87.541283       143.654221      83.906794       90.000000       108.077827      0       TS_01
+550.446462      107.202244      143.654221      83.906811       90.000000       106.456666      0       TS_01
+556.020058      127.021101      143.654221      83.906825       90.000000       104.983386      0       TS_01
+561.108958      146.970031      143.654221      83.906836       90.000000       103.664170      0       TS_01
+565.764856      167.024545      143.654221      83.906844       90.000000       102.503192      0       TS_01
+570.041693      187.163396      143.654221      83.906851       90.000000       101.503022      0       TS_01
+573.994933      207.368340      143.654221      83.906855       90.000000       100.665014      0       TS_01
+577.681008      227.623793      143.654221      83.906858       90.000000       99.989685       0       TS_01
+581.156911      247.916420      143.654221      83.906860       90.000000       99.477026       0       TS_01
+584.479922      268.234680      143.654221      83.906861       90.000000       99.126772       0       TS_01
+587.707440      288.568351      143.654221      83.906861       90.000000       98.938590       0       TS_01
+590.896888      308.908038      143.654221      83.906861       90.000000       98.912225       0       TS_01
+594.105678      329.244677      143.654221      83.906861       90.000000       99.047559       0       TS_01
+...
+</code></pre></div>
+</div>
+</div>
+</details>
+<h3 id="helix">Helix</h3>
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths helix --annotations-directory tomograms/annotations/ --output-star-file tomograms/helix.star --distance-between-particles 30 --twist 30
+</code></pre></div>
+<h3 id="rings">Rings</h3>
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths rings --annotations-directory tomograms/annotations/ --output-star-file tomograms/rings.star --distance-between-particles 30 --number-of-points-per-ring 20 --ring-radius 30
+</code></pre></div>
+<p><img alt="Path annotation" src="../images/rings.png" /></p>
+<details class="note">
+<summary>Example ring poses STAR file for path annotation</summary>
+<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">rings.star</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>data_particles
+
+loop_
+_x #1
+_y #2
+_z #3
+_rot #4
+_tilt #5
+_psi #6
+_manifold_id #7
+_tilt_series_id #8
+172.715260      462.534600      31.518678       -0.000000       121.067266      152.470202      0       TS_01
+187.601372      434.386138      31.518681       0.000000        121.067261      151.800465      0       TS_01
+202.812960      406.368763      31.518682       0.000000        121.067257      151.215781      0       TS_01
+218.307508      378.463004      31.518684       -0.000000       121.067255      150.716523      0       TS_01
+234.042799      350.648113      31.518685       0.000000        121.067253      150.302892      0       TS_01
+249.976910      322.902269      31.518685       0.000000        121.067252      149.974978      0       TS_01
+266.068179      295.202772      31.518685       -0.000000       121.067251      149.732799      0       TS_01
+282.275139      267.526232      31.518686       -0.000000       121.067251      149.576337      0       TS_01
+298.556435      239.848747      31.518686       -0.000000       121.067251      149.505567      0       TS_01
+...
+</code></pre></div>
+</div>
+</div>
+</details>
+<h2 id="convert-poses-into-relion-5-star-files">Convert Poses into Relion 5 STAR files</h2>
+<div class="highlight"><pre><span></span><code>napari-tomoslice export-poses --input-file tomograms/backbone.star --output-type relion5 --output-file tomograms/backbone-relion.star
+</code></pre></div>
+<details class="note">
+<summary>Example Relion 5 STAR file for path annotation</summary>
+<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">backbone-relion.star</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>data_
+
+loop_
+_rlnCoordinateX #1
+_rlnCoordinateY #2
+_rlnCoordinateZ #3
+_rlnAngleRot #4
+_rlnAngleTilt #5
+_rlnAnglePsi #6
+_rlnTomoManifoldIndex #7
+_rlnTomoName #8
+544.339600      87.541283       143.654221      83.906794       90.000000       108.077827      0       TS_01
+550.446462      107.202244      143.654221      83.906811       90.000000       106.456666      0       TS_01
+556.020058      127.021101      143.654221      83.906825       90.000000       104.983386      0       TS_01
+561.108958      146.970031      143.654221      83.906836       90.000000       103.664170      0       TS_01
+565.764856      167.024545      143.654221      83.906844       90.000000       102.503192      0       TS_01
+570.041693      187.163396      143.654221      83.906851       90.000000       101.503022      0       TS_01
+573.994933      207.368340      143.654221      83.906855       90.000000       100.665014      0       TS_01
+577.681008      227.623793      143.654221      83.906858       90.000000       99.989685       0       TS_01
+581.156911      247.916420      143.654221      83.906860       90.000000       99.477026       0       TS_01
+584.479922      268.234680      143.654221      83.906861       90.000000       99.126772       0       TS_01
+587.707440      288.568351      143.654221      83.906861       90.000000       98.938590       0       TS_01
+590.896888      308.908038      143.654221      83.906861       90.000000       98.912225       0       TS_01
+594.105678      329.244677      143.654221      83.906861       90.000000       99.047559       0       TS_01
+597.391177      349.569046      143.654221      83.906861       90.000000       99.344633       0       TS_01
+...
+</code></pre></div>
+</div>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
