@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://alisterburt.github.io/napari-tomoslice/">
+        <link rel="canonical" href="https://napari-tomoslice.github.io/">
       
       
       
@@ -160,7 +160,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/alisterburt/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/napari-tomoslice/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -206,7 +206,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/alisterburt/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/napari-tomoslice/napari-tomoslice" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -276,11 +276,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#running-napari-tomoslice" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Running napari-tomoslice
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualize-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualize the results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -574,11 +598,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#running-napari-tomoslice" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation
+      Running napari-tomoslice
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualize-the-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualize the results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -614,8 +662,51 @@ and generating particle poses from these geometrical annotations for subtomogram
  Poses can be sampled in a number of ways from each annotation type, for a complete list see: 
  <a href="generate/">pose generation</a></p>
 <p>Poses can be easily converted into <a href="https://relion.readthedocs.io/en/release-5.0/">Relion</a> <a href="https://en.wikipedia.org/wiki/Self-defining_Text_Archive_and_Retrieval">STAR file format</a> or <a href="https://www.dynamo-em.org/w/index.php?title=Main_Page">Dynamo table format</a></p>
-<h2 id="installation">Installation</h2>
-<pre><code>pip install napari-tomoslice
+<h2 id="running-napari-tomoslice">Running <em>napari-tomoslice</em></h2>
+<p><em>napari-tomoslice</em> can be run with <a href="https://github.com/astral-sh/uv"><em>uvx</em></a></p>
+<pre><code>uvx --python 3.11 \
+--from git+https://github.com/napari-tomoslice/napari-tomoslice.git \
+napari-tomoslice
+</code></pre>
+<p>More information on uvx can be found here on the <a href="https://docs.astral.sh/uv/guides/tools/"><em>uvx documentation</em></a></p>
+<h2 id="example-data">Example Data</h2>
+<p>Data used in the examples can be downloaded from <a href="https://zenodo.org/records/15259792"><em>zenodo</em></a></p>
+<h3 id="visualize-the-results">Visualize the results</h3>
+<p>Results from generate-poses and convert-poses can be visualized with their corresponding tomogram with the example script below.</p>
+<pre><code>import mrcfile
+import napari
+import numpy as np
+import starfile
+from scipy.spatial.transform import Rotation as R
+
+tomogram_file = 'tomograms/microtubule.mrc'
+particles_file = 'tomograms/backbone.star' # STAR file output from generate-poses or convert-poses
+
+with mrcfile.open(tomogram_file) as mrc:
+    tomogram = mrc.data.copy()
+df = starfile.read(particles_file)
+
+xyz = df[['x', 'y', 'z']].to_numpy()
+# xyz_relion = df[['rlnCoordinateX', 'rlnCoordinateY', 'rlnCoordinateZ']].to_numpy()
+
+euler_angles = df[['rot', 'tilt', 'psi']].to_numpy()
+# euler_angles_relion = df[['rlnAngleRot', 'rlnAngleTilt', 'rlnAnglePsi']].to_numpy()
+
+rotations = R.from_euler(seq='ZYZ', angles=euler_angles, degrees=True).inv()
+rotated_z_vectors = rotations.apply([0, 0, 1])
+
+viewer = napari.Viewer(ndisplay=3)
+
+vectors = np.zeros((rotated_z_vectors.shape[0], 2, 3))
+
+vectors[:, 0, :] = xyz[:, ::-1]
+vectors[:, 1, :] = rotated_z_vectors[:, ::-1]
+
+viewer.add_image(tomogram, blending='translucent_no_depth', colormap='gray_r')
+viewer.add_points(xyz[:, ::-1], face_color='cornflowerblue', size=10)
+viewer.add_vectors(vectors, length=12, edge_color='orange', edge_width=4)
+
+napari.run()
 </code></pre>
 
 
@@ -665,7 +756,7 @@ and generating particle poses from these geometrical annotations for subtomogram
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "content.code.copy", "content.code.wrap"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.c8b220af.min.js"></script>

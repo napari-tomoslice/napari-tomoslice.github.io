@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/annotate/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/annotate/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/dipoles/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/dipoles/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/export/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/export/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/generate/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/generate/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/paths/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/paths/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/points/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/points/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
     <url>
-         <loc>https://alisterburt.github.io/napari-tomoslice/spheres/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <loc>https://napari-tomoslice.github.io/spheres/</loc>
+         <lastmod>2025-04-22</lastmod>
     </url>
 </urlset>
