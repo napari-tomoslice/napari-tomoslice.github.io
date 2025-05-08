@@ -641,7 +641,10 @@
 
 <h1 id="spheres">Spheres</h1>
 <h2 id="annotate-spheres">Annotate Spheres</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice annotate --tomogram-directory tomograms/ --annotation-directory tomograms/annotations/ --mode spheres
+<div class="highlight"><pre><span></span><code>napari-tomoslice annotate \
+--tomogram-directory tomograms/ \
+--annotation-directory tomograms/annotations/ \
+--mode spheres
 </code></pre></div>
 <ul>
 <li>Load a tomogram using the tomogram browser on the right panel</li>
@@ -688,7 +691,10 @@ _radius #4
 </div>
 </details>
 <h2 id="generate-poses-from-sphere-annotations">Generate Poses from Sphere Annotations</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses spheres --annotations-directory tomograms/annotations/ --output-star-file tomograms/spheres.star --distance-between-particles 10
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses spheres \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/spheres.star \
+--distance-between-particles 10
 </code></pre></div>
 <p><img alt="Sphere annotation" src="../images/spheres.png" /></p>
 <details class="note">
@@ -728,7 +734,10 @@ _tilt_series_id #7
 </div>
 </details>
 <h2 id="convert-poses-into-relion-5-star-files">Convert Poses into Relion 5 STAR files</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice convert-poses --input-file tomograms/spheres.star --output-type relion5 --output-file tomograms/spheres-relion.star
+<div class="highlight"><pre><span></span><code>napari-tomoslice convert-poses \
+--input-file tomograms/spheres.star \
+--output-type relion5 \
+--output-file tomograms/spheres-relion.star
 </code></pre></div>
 <details class="note">
 <summary>Example Relion 5 STAR file for sphere annotation</summary>

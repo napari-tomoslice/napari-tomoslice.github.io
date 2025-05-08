@@ -687,7 +687,10 @@
 
 <h1 id="dipoles">Dipoles</h1>
 <h2 id="annotate-dipoles">Annotate Dipoles</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice annotate --tomogram-directory tomograms/ --annotation-directory tomograms/annotations/ --mode dipoles
+<div class="highlight"><pre><span></span><code>napari-tomoslice annotate \
+--tomogram-directory tomograms/ \
+--annotation-directory tomograms/annotations/ \
+--mode dipoles
 </code></pre></div>
 <ul>
 <li>Load a tomogram using the tomogram browser on the right panel</li>
@@ -741,7 +744,9 @@ _direction_z #6
 </details>
 <h2 id="generate-poses-from-dipole-annotations">Generate Poses from Dipole Annotations</h2>
 <h3 id="direct-dipole">Direct Dipole</h3>
-<p><div class="highlight"><pre><span></span><code> napari-tomoslice generate-poses  dipoles direct --annotations-directory tomograms/annotations/ --output-star-file tomograms/direct.star
+<p><div class="highlight"><pre><span></span><code> napari-tomoslice generate-poses  dipoles direct \
+ --annotations-directory tomograms/annotations/ \
+ --output-star-file tomograms/direct.star
 </code></pre></div>
   <img alt="Dipole annotation" src="../images/direct.png" /></p>
 <details class="note">
@@ -767,8 +772,11 @@ _tilt_series_id #7
 </div>
 </details>
 <h3 id="disk-dipole">Disk Dipole</h3>
-<p><div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses dipoles disk --annotations-directory tomograms/annotations/ --output-star-file tomograms/disk.star --distance-between-particles 10 --disk-ra
-dius 30
+<p><div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses dipoles disk \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/disk.star \
+--distance-between-particles 10 \
+--disk-radius 30
 </code></pre></div>
   <img alt="Dipole annotation" src="../images/disk.png" /></p>
 <details class="note">
@@ -799,7 +807,10 @@ _tilt_series_id #7
 </div>
 </details>
 <h2 id="convert-poses-into-relion-5-star-files">Convert Poses into Relion 5 STAR files</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice export-poses --input-file tomograms/disk.star --output-type relion5 --output-file tomograms/disk-relion.star
+<div class="highlight"><pre><span></span><code>napari-tomoslice convert-poses \
+--input-file tomograms/disk.star \
+--output-type relion5 \
+--output-file tomograms/disk-relion.star
 </code></pre></div>
 <details class="note">
 <summary>Example Relion 5 STAR file for dipole annotation</summary>

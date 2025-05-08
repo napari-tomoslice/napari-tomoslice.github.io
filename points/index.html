@@ -653,7 +653,10 @@
 
 <h1 id="points">Points</h1>
 <h2 id="annotate-points">Annotate Points</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice annotate --tomogram-directory tomograms/ --annotation-directory tomograms/annotations/ --mode points
+<div class="highlight"><pre><span></span><code>napari-tomoslice annotate \
+--tomogram-directory tomograms/ \
+--annotation-directory tomograms/annotations/ \
+--mode points
 </code></pre></div>
 <ul>
 <li>Load a tomogram using the tomogram browser on the right panel</li>
@@ -694,7 +697,9 @@ _z #3
 </div>
 </details>
 <h2 id="generate-poses-from-point-annotations">Generate Poses from Point Annotations</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses points --annotations-directory tomograms/annotations/ --output-star-file tomograms/points.star
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses points \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/points.star
 </code></pre></div>
 <details class="note">
 <summary>Example poses STAR file for point annotation</summary>
@@ -722,7 +727,10 @@ _tilt_series_id #4
 </div>
 </details>
 <h3 id="convert-poses-into-relion-5-star-files">Convert Poses into Relion 5 STAR files</h3>
-<div class="highlight"><pre><span></span><code>napari-tomoslice export-poses --input-file tomograms/points.star --output-type relion5 --output-file tomograms/points-relion.star
+<div class="highlight"><pre><span></span><code>napari-tomoslice convert-poses \
+--input-file tomograms/points.star \
+--output-type relion5 \
+--output-file tomograms/points-relion.star
 </code></pre></div>
 <details class="note">
 <summary>Example Relion 5 STAR file for point annotation</summary>

@@ -707,7 +707,10 @@
 
 <h1 id="paths">Paths</h1>
 <h2 id="annotate-paths">Annotate Paths</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice annotate --tomogram-directory tomograms/ --annotation-directory tomograms/annotations/ --mode paths
+<div class="highlight"><pre><span></span><code>napari-tomoslice annotate \
+--tomogram-directory tomograms/ \
+--annotation-directory tomograms/annotations/ \
+--mode paths
 </code></pre></div>
 <ul>
 <li>Load a tomogram using the tomogram browser on the right panel</li>
@@ -761,7 +764,10 @@ _z #4
 </details>
 <h2 id="generate-poses-from-path-annotations">Generate Poses from Path Annotations</h2>
 <h3 id="backbone">Backbone</h3>
-<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths backbone --annotations-directory tomograms/annotations/ --output-star-file tomograms/backbone.star --distance-between-particles 20
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths backbone \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/backbone.star \
+--distance-between-particles 20
 </code></pre></div>
 <p><img alt="Path annotation" src="../images/backbone.png" />
   <img alt="Path annotation" src="../images/backbone-fibril.png" /></p>
@@ -798,10 +804,19 @@ _tilt_series_id #8
 </div>
 </details>
 <h3 id="helix">Helix</h3>
-<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths helix --annotations-directory tomograms/annotations/ --output-star-file tomograms/helix.star --distance-between-particles 30 --twist 30
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths helix \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/helix.star \
+--distance-between-particles 30 \
+--twist 30
 </code></pre></div>
 <h3 id="rings">Rings</h3>
-<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths rings --annotations-directory tomograms/annotations/ --output-star-file tomograms/rings.star --distance-between-particles 30 --number-of-points-per-ring 20 --ring-radius 30
+<div class="highlight"><pre><span></span><code>napari-tomoslice generate-poses paths rings \
+--annotations-directory tomograms/annotations/ \
+--output-star-file tomograms/rings.star \
+--distance-between-particles 30 \
+--number-of-points-per-ring 20 \
+--ring-radius 30
 </code></pre></div>
 <p><img alt="Path annotation" src="../images/rings.png" /></p>
 <details class="note">
@@ -833,7 +848,10 @@ _tilt_series_id #8
 </div>
 </details>
 <h2 id="convert-poses-into-relion-5-star-files">Convert Poses into Relion 5 STAR files</h2>
-<div class="highlight"><pre><span></span><code>napari-tomoslice export-poses --input-file tomograms/backbone.star --output-type relion5 --output-file tomograms/backbone-relion.star
+<div class="highlight"><pre><span></span><code>napari-tomoslice convert-poses \
+--input-file tomograms/backbone.star \
+--output-type relion5 \
+--output-file tomograms/backbone-relion.star
 </code></pre></div>
 <details class="note">
 <summary>Example Relion 5 STAR file for path annotation</summary>
