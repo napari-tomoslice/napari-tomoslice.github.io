@@ -788,9 +788,9 @@
  generate particle poses from point annotations                                                                                                                                                                                                  
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory        PATH  [default: None] [required]                                                                                                                                                                            │
-│ *  --output-star-file             PATH  [default: None] [required]                                                                                                                                                                            │
-│    --help                               Show this message and exit.                                                                                                                                                                           │
+│ *  --annotation-directory  -a      PATH  directory containing annotations [default: None] [required]                                                                                                                                          │
+│ *  --output-star-file      -o      PATH  output star file name [default: None] [required]                                                                                                                                                     │
+│    --help                                Show this message and exit.                                                                                                                                                                          │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h2 id="spheres">Spheres</h2>
@@ -799,10 +799,10 @@
  generate particle poses from sphere annotations                                                                                                                                                                                                 
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory             PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --output-star-file                  PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --distance-between-particles        FLOAT  [default: None] [required]                                                                                                                                                                      │
-│    --help                                     Show this message and exit.                                                                                                                                                                     │
+│ *  --annotation-directory        -a      PATH   directory containing annotations [default: None] [required]                                                                                                                                   │
+│ *  --output-star-file            -o      PATH   output star file name [default: None] [required]                                                                                                                                              │
+│ *  --distance_between_particles  -d      FLOAT  distance between particles on the sphere [default: None] [required]                                                                                                                           │
+│    --help                                       Show this message and exit.                                                                                                                                                                      │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h2 id="paths">Paths</h2>
@@ -814,10 +814,10 @@
  evenly spaced particle poses along the annotated path                                                                                                                                                                                           
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory             PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --output-star-file                  PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --distance-between-particles        FLOAT  [default: None] [required]                                                                                                                                                                      │
-│    --help                                     Show this message and exit.                                                                                                                                                                     │
+│ *  --annotation-directory        -a      PATH   directory containing annotations [default: None] [required]                                                                                                                                   │
+│ *  --output-star-file            -o      PATH   output star file name [default: None] [required]                                                                                                                                              │
+│ *  --distance_between_particles  -d      FLOAT  distance between particles along the backbone [default: None] [required]                                                                                                                      │
+│    --help                                       Show this message and exit.                                                                                                                                                                     │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h3 id="helix">Helix</h3>
@@ -826,11 +826,11 @@
  evenly spaced particle poses along the annotated helical path                                                                                                                                                                                   
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory             PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --output-star-file                  PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --distance-between-particles        FLOAT  [default: None] [required]                                                                                                                                                                      │
-│ *  --twist                             FLOAT  [default: None] [required]                                                                                                                                                                      │
-│    --help                                     Show this message and exit.                                                                                                                                                                     │
+│ *  --annotation-directory        -a      PATH   directory containing annotations [default: None] [required]                                                                                                                                   │
+│ *  --output-star-file            -o      PATH   output star file name [default: None] [required]                                                                                                                                              │
+│ *  --distance_between_particles  -d      FLOAT  distance between particles along the backbone [default: None] [required]                                                                                                                      │
+│ *  --twist                       -t      FLOAT  helical twist [default: None] [required]                                                                                                                                                      │
+│    --help                                       Show this message and exit.                                                                                                                                                                   │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h3 id="rings">Rings</h3>
@@ -839,12 +839,12 @@
  particle poses on evenly spaced rings along the annotated path                                                                                                                                                                                  
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory             PATH     [default: None] [required]                                                                                                                                                                    │
-│ *  --output-star-file                  PATH     [default: None] [required]                                                                                                                                                                    │
-│ *  --distance-between-particles        FLOAT    [default: None] [required]                                                                                                                                                                    │
-│ *  --number-of-points-per-ring         INTEGER  [default: None] [required]                                                                                                                                                                    │
-│ *  --ring-radius                       FLOAT    [default: None] [required]                                                                                                                                                                    │
-│    --help                                       Show this message and exit.                                                                                                                                                                   │
+│ *  --annotation-directory        -a      PATH     directory containing annotations [default: None] [required]                                                                                                                                 │
+│ *  --output-star-file            -o      PATH     output star file name [default: None] [required]                                                                                                                                            │
+│ *  --distance_between_particles  -d      FLOAT    distance between rings along the backbone [default: None] [required]                                                                                                                        │
+│ *  --number_of_points_per_ring   -n      INTEGER  number of particles to be placed on each ring [default: None] [required]                                                                                                                    │
+│ *  --ring_radius                 -r      FLOAT    radius of the ring [default: None] [required]                                                                                                                                               │
+│    --help                                         Show this message and exit.                                                                                                                                                                  │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h2 id="dipoles">Dipoles</h2>
@@ -856,9 +856,9 @@
  particle poses directly from the annotated dipoles                                                                                                                                                                                              
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory        PATH  [default: None] [required]                                                                                                                                                                            │
-│ *  --output-star-file             PATH  [default: None] [required]                                                                                                                                                                            │
-│    --help                               Show this message and exit.                                                                                                                                                                           │
+│ *  --annotation-directory  -a      PATH  directory containing annotations [default: None] [required]                                                                                                                                          │
+│ *  --output-star-file      -o      PATH  output star file name [default: None] [required]                                                                                                                                                     │
+│    --help                                Show this message and exit.                                                                                                                                                                              │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 <h3 id="disk">Disk</h3>
@@ -867,11 +867,11 @@
  particle poses on a disk around the annotated dipoles                                                                                                                                                                                           
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *  --annotations-directory             PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --output-star-file                  PATH   [default: None] [required]                                                                                                                                                                      │
-│ *  --distance-between-particles        FLOAT  [default: None] [required]                                                                                                                                                                      │
-│ *  --disk-radius                       FLOAT  [default: None] [required]                                                                                                                                                                      │
-│    --help                                     Show this message and exit.                                                                                                                                                                     │
+│ *  --annotation-directory        -a      PATH   directory containing annotations [default: None] [required]                                                                                                                                   │
+│ *  --output-star-file            -o      PATH   output star file name [default: None] [required]                                                                                                                                              │
+│ *  --distance_between_particles  -d      FLOAT  distance between particles on the disk [default: None] [required]                                                                                                                             │
+│ *  --disk_radius                 -r      FLOAT  radius of the disk [default: None] [required]                                                                                                                                                 │
+│    --help                                       Show this message and exit.                                                                                                                                                                        │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 </code></pre></div>
 

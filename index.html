@@ -681,7 +681,9 @@ and generating particle poses from these geometrical annotations for subtomogram
  <a href="generate/">pose generation</a></p>
 <p>Poses can be easily converted into <a href="https://relion.readthedocs.io/en/release-5.0/">Relion</a> <a href="https://en.wikipedia.org/wiki/Self-defining_Text_Archive_and_Retrieval">STAR file format</a> or <a href="https://www.dynamo-em.org/w/index.php?title=Main_Page">Dynamo table format</a></p>
 <h2 id="running-napari-tomoslice">Running <em>napari-tomoslice</em></h2>
-<p>The latest version <em>napari-tomoslice</em> can be run with <a href="https://github.com/astral-sh/uv"><em>uvx</em></a>.</p>
+<p><em>napari-tomoslice</em> can simply be run using <a href="https://github.com/astral-sh/uv"><em>uvx</em></a> with:</p>
+<pre><code>uvx napari-tomoslice
+</code></pre>
 <p><a href="https://docs.astral.sh/uv/getting-started/installation/#standalone-installer"><em>uv</em></a> can be installed with: </p>
 <pre><code>curl -LsSf https://astral.sh/uv/install.sh | sh
 </code></pre>
@@ -689,11 +691,6 @@ and generating particle poses from these geometrical annotations for subtomogram
 <p class="admonition-title">How to install and use uv ?</p>
 <p>More detailed information on <a href="https://docs.astral.sh/uv/getting-started/installation/"><em>how to install uv</em></a> and <a href="https://docs.astral.sh/uv/guides/tools/"><em>how to use uvx</em></a> can be found on the <a href="https://docs.astral.sh/uv/getting-started/"><em>uv documentation</em></a>.</p>
 </div>
-<p>The latest version <em>napari-tomoslice</em> can be run with:</p>
-<pre><code>uvx --python 3.11 \
---from git+https://github.com/napari-tomoslice/napari-tomoslice.git \
-napari-tomoslice
-</code></pre>
 <h2 id="examples">Examples</h2>
 <ul>
 <li><a href="points/">Points</a></li>
